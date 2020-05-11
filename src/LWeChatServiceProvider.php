@@ -2,10 +2,10 @@
 
 namespace Lany\LWeChat;
 
-use Illuminate\Contracts\Support\DeferrableProvider;
+//use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 
-class LWeChatServiceProvider extends ServiceProvider implements DeferrableProvider
+class LWeChatServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -32,13 +32,5 @@ class LWeChatServiceProvider extends ServiceProvider implements DeferrableProvid
         //$this->loadRoutesFrom(__DIR__.'/routes.php');
     }
 
-    /**
-     * 获取由提供者提供的服务。
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return [LWeChat::class];
-    }
+
 }
