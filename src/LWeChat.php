@@ -7,7 +7,7 @@
  */
 namespace Lany\LWeChat;
 
-use Illuminate\Contracts\Config\Repository;
+use Illuminate\Config\Repository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
