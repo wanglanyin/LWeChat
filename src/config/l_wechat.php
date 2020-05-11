@@ -11,7 +11,7 @@ return [
    'app_id' => '',
    'app_secret' => '',
    'app_token' => '',
-   'protocol' => '',
+
 
     //js-api 随机字符串
     'js_api_nonce_str' => ''

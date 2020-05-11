@@ -18,6 +18,7 @@ class LWeChat
     public function __construct(Repository $config)
     {
         $this->config = $config->get('l_wechat');
+        $this->config['protocol'] = request()->secure() ? "https" : "http";
     }
 
     /**
@@ -58,7 +59,7 @@ class LWeChat
         if (request()->getClientIp() == "127.0.0.1") {
             $openid = "local";
             session(["openid" => $openid]);
-            return redirect($this->protocol . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+            return redirect($this->config['protocol'] . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
         };
         $request = request();
         if (!$request->get("code")) {
