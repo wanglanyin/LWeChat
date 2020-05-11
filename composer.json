@@ -1,0 +1,33 @@
+{
+    "name": "wlany/l-wechat",
+    "description": "wechat 测试Demo",
+    "authors": [
+        {
+            "name": "Lany",
+            "email": "wlany@qq.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lany\\LWeChat\\LWeChatServiceProvider"
+            ],
+            "aliases": {
+                "LWeChat": "Lany\\LWeChat\\Facade\\LWeChat"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Lany\\LWeChat\\": "src"
+        },
+        "files": [
+            "src/helper.php"
+        ]
+    },
+    "require": {
+        "illuminate/support": ">=7.0.*",
+        "laravel/framework": ">=5.5",
+        "php": ">=7.0.0"
+    }
+}
