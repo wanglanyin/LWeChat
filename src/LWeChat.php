@@ -107,7 +107,7 @@ class LWeChat
     {
         $access_token = cache('access_token');
         if (!$access_token) {
-            $callback = curl('https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' . $this->app_id . '&secret=' . $this->app_secret);
+            $callback = curl('https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' . $this->config['app_id'] . '&secret=' . $this->config['app_secret']);
             if (!isset($callback['access_token'])) {
                 dd("获取ACCESS_TOKEN失败，请重试！");
             }
